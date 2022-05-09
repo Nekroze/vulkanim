@@ -128,8 +128,8 @@ proc translateType(s: string): string =
     .replace("size_t", "uint") # uint matches pointer size just like size_t
     .replace("float", "float32")
     .replace("double", "float64")
-    .replace("VK_DEFINE_HANDLE", "VkHandle")
-    .replace("VK_DEFINE_NON_DISPATCHABLE_HANDLE", "VkNonDispatchableHandle")
+    .replace("VK_DEFINE_HANDLE", "distinct VkHandle")
+    .replace("VK_DEFINE_NON_DISPATCHABLE_HANDLE", "distinct VkNonDispatchableHandle")
     .replace("const ", "")
     .replace(" const", "")
     .replace("unsigned ", "u")
